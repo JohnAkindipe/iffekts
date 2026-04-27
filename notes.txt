@@ -127,3 +127,7 @@ NEXT STEPS
 -- make "click to select effect" bolder.
 -- Work on home page
 -- Keep navbar fixed while scrolling
+-- Work on box fading
+-- Work on navbar margin/padding bottom on live-effects page
+-- Adjust home page box sizing to fit mobile view
+-- Adjust Camera feed and effect output to fit mobile view

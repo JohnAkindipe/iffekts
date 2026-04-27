@@ -5,7 +5,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex items-center justify-between px-8 py-4 bg-white border-b-2 border-b-[#F5824A]">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-4 bg-white border-b-2 border-b-[#F5824A]">
       <a href="/" className="text-xl font-bold tracking-tight">iffekt</a>
       <div className="flex gap-6 text-sm font-medium">
         <a href="#" className="hover:text-green-600 transition-colors" style={{ fontFamily: "var(--font-borel)" }}>deepdive</a>
