@@ -136,6 +136,14 @@ body {
   box-shadow: 4px 4px 0px #f5824a;
 }
 
+.scroll-text {
+  box-shadow: inset 0px 7px 8px 0px lightgrey
+}
+
+.down-arrow-div {
+  border: 1px dashed black
+}
+
 
 .term-fg1 { } /* don't bold beccause it looks weird */
 .term-fg2 { color: #838887; } /* faint (decreased intensity) - same as gray really */

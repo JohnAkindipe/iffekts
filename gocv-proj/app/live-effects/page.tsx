@@ -3,6 +3,7 @@ import { useCamera } from "../hooks/useCamera";
 import { useFrameProcessor } from "../hooks/useFrameProcessor";
 import { CameraVideo } from "../components/CameraVideo";
 import { ErrorMessage } from "../components/ErrorMessage";
+import Image from "next/image";
 
 export default function LiveEffects() {
   const { videoRef, status, error, startCamera, stopCamera } = useCamera({
@@ -22,6 +23,7 @@ export default function LiveEffects() {
         <div className="mt-8 flex flex-col items-center gap-3">
           <h1
             className="text-4xl font-normal text-center tracking-tight heading-fade"
+            style={{ marginTop: "24px" }}
           >
             Check out cool effects below
           </h1>
@@ -33,15 +35,15 @@ export default function LiveEffects() {
         <ErrorMessage message={error} />
 
         <div className="flex flex-wrap justify-center gap-4">
-          <div style={{ minWidth: 300, maxWidth: "70vw", flex: 1 }}>
+          <div className="w-full sm:flex-1 sm:max-w-[70vw]">
             <h2 className="mb-2 text-left font-bold" style={{ textDecoration: "underline wavy #f5824a", textUnderlineOffset: "4px" }}>Camera feed</h2>
             <CameraVideo videoRef={videoRef} />
           </div>
 
-          <div style={{ minWidth: 300, maxWidth: "70vw", flex: 1 }}>
+          <div className="w-full sm:flex-1 sm:max-w-[70vw]">
             <h2 className="mb-2 text-left font-bold" style={{ textDecoration: "underline wavy #f5824a", textUnderlineOffset: "4px" }}>Effect</h2>
             {processedImage ? (
-              <img
+              <Image
                 src={processedImage}
                 alt="Processed"
                 className="w-full max-w-[900px] aspect-video object-cover rounded-xl"
