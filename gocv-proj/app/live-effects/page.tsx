@@ -43,11 +43,14 @@ export default function LiveEffects() {
           <div className="w-full sm:flex-1 sm:max-w-[70vw]">
             <h2 className="mb-2 text-left font-bold" style={{ textDecoration: "underline wavy #f5824a", textUnderlineOffset: "4px" }}>Effect</h2>
             {processedImage ? (
-              <Image
-                src={processedImage}
-                alt="Processed"
-                className="w-full max-w-[900px] aspect-video object-cover rounded-xl"
-              />
+              <div className="relative w-full max-w-[900px] aspect-video rounded-xl overflow-hidden">
+                <Image
+                  src={processedImage}
+                  alt="Processed"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             ) : (
               <div className="w-full max-w-[900px] aspect-video bg-gray-100 flex items-center justify-center rounded-xl text-gray-500">
                 {isProcessing ? "Applying Effects..." : "Effect displayed here"}
