@@ -1,4 +1,4 @@
-# GoCV — Real-Time Webcam Effects
+# iffekts — Real-Time Webcam Effects Using Computer Vision
 
 A full-stack application that captures live webcam frames in the browser, ships them over HTTP to a Go backend, applies computer vision effects using OpenCV, and streams the processed image back for display — all in near real-time.
 
